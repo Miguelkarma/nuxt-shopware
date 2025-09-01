@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
   ssr: true,
-  css: ["@/assets/css/main.css"],
+
   tailwindcss: {
     configPath: "/tailwind.config.js",
   },

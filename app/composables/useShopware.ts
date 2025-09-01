@@ -1,10 +1,10 @@
-const apiUrl = "http://shopware-laragon.test/store-api";
-const accessKey = "SWSCUTBVY0POVTJHCNPJWLHGDQ";
-
 import { ref } from "vue";
 
 export const useShopware = () => {
   const products = ref<any[]>([]);
+
+  const apiUrl = import.meta.env.VITE_SHOPWARE_API_URL;
+  const accessKey = import.meta.env.VITE_SHOPWARE_ACCESS_KEY;
 
   async function getProducts(limit = 20, page = 1) {
     const res = await fetch(`${apiUrl}/product`, {
