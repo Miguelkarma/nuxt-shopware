@@ -21,6 +21,7 @@ export const useShopware = () => {
     }
 
     const data = await res.json();
+    console.log(data);
     products.value = data?.elements || [];
   }
 
